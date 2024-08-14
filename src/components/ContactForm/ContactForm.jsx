@@ -1,19 +1,25 @@
 import css from "./ContactForm.module.css";
 import { Formik, Form, Field } from "formik";
 
-const hedlSubmit = () => {
-console.log("HendleSubmit")
-};
 
-export default function ContactForm({  }) {
+
+export default function ContactForm({ HendleSubmit }) {
   return (
 
-    <></>
-    // <Formik initialValues={} onSubmit={hedlSubmit}>
-    //   <Form> 
-    //     <Field name={ }>
-    //     </Field>
-    //   </Form>
-    // </Formik>
+    <>
+     <Formik initialValues={
+      {username:'',
+      email:''}
+     } onSubmit={HendleSubmit}>
+       <Form> 
+         <label >Name</label>
+         <Field name='username' >
+         </Field>
+         <label >Namber</label>
+         <Field name='email'  >
+         </Field>
+       </Form>
+     </Formik>
+    </>
   );
 }
