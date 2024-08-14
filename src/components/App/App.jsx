@@ -17,8 +17,9 @@ export default function App() {
   );
 
 
-  const HendleSubmit = (values) => {
+  const HendleSubmit = (values, actions) => {
     console.log(values)
+    actions.resetForm();
     };
   // const addContact = (newContact) => {
   //   SetContacts((prevContacts) => [...prevContacts, newContact]);
