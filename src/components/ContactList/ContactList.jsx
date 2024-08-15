@@ -1,13 +1,12 @@
 import Contact from "../Contact/Contact.jsx";
-import Filter from "../Filter/Filter.jsx";
+import SearchBox from "../SearchBox/SearchBox.jsx";
 import css from "./ContactList.module.css";
 
 export default function ContactList({ value, onFilter, contacts, onDelete }) {
 
-  console.log(contacts)
   return (
     <div className={css.contactList}>
-      <Filter value={value} onFilter={onFilter} />
+      {/* <SearchBox value={value} onFilter={onFilter} /> */}
       {contacts.map((contact) => (
         <Contact 
           key={contact.id}
